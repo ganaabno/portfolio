@@ -329,9 +329,10 @@ const faqs = [
 const contactLinks: { name: string; href: string }[] = [
   {
     name: "Email",
-    href: "mailto:gg733328@gmail.com?subject=Project%20inquiry",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=gg733328%40gmail.com",
   },
   { name: "GitHub", href: "https://github.com/ganaabno" },
+  { name: "Facebook", href: "https://www.facebook.com/weabo/" },
   { name: "LinkedIn", href: "" },
   { name: "Telegram", href: "" },
 ];
@@ -1024,6 +1025,8 @@ function App() {
                 <a
                   className="contact-circle"
                   href={contactLinks[0].href || "#contact-links"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={t("Start a project")}
                 >
                   <ArrowUpRight size={48} strokeWidth={1.25} />
@@ -1036,14 +1039,8 @@ function App() {
                     <a
                       key={link.name}
                       href={link.href}
-                      target={
-                        link.href.startsWith("mailto:") ? undefined : "_blank"
-                      }
-                      rel={
-                        link.href.startsWith("mailto:")
-                          ? undefined
-                          : "noopener noreferrer"
-                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {t(link.name)} <ArrowUpRight size={16} />
                     </a>

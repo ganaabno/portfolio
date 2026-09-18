@@ -15,4 +15,4 @@ Build for production with `npm run build`. The output is in `dist/`.
 
 ## Contact links
 
-Set the four `href` values in `contactLinks` in `src/App.tsx` before publishing. Use a `mailto:` URL for email and full `https://` URLs for GitHub, LinkedIn, and Telegram. Empty values display the labels without linking to an unverified account.
+Contact destinations are set in `contactLinks` in `src/App.tsx`. The email action opens Gmail compose in a new tab with `gg733328@gmail.com` filled in as the recipient. GitHub and Facebook are linked; LinkedIn and Telegram remain inactive until their URLs are added.
